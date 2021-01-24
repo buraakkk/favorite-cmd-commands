@@ -1,0 +1,189 @@
+/* I use it for Arabic parts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background: #f7d6bc;
+}
+
+h1 {
+/*position*/
+    padding: 25px;
+    width: 100%;
+    max-height: 50px;
+    margin-bottom: 0;
+/*flexbox part*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+/*text properties*/
+    text-transform: capitalize;
+    font-weight: 600;
+    background-color: #e5f7e54f;
+    font-size: 60px;
+/*animation */
+    animation-duration:1s;
+    animation-name: example;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+
+/* The animation code */
+@keyframes example {
+    from {background-color: rgb(248, 144, 7);}
+    to {background-color: rgb(30, 255, 0);}
+  }
+
+
+h2 {
+    clear: left; // to stop any floating on this element..
+    padding: 25px;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    background-color: #4ad14a4f;
+    animation-duration: 2s;
+    animation-name: example2;
+    animation-iteration-count: infinite;
+}
+/* The animation code */
+@keyframes example2 {
+    0% {transform: translateX(0px);}
+    100% {transform: translateX(100px);}
+}
+
+
+  li {
+    list-style: none;
+}
+
+
+/*Float section of grid */
+.grid-item {
+    background-color: white;
+    border-radius:80px;
+    margin: 2rem 2rem;
+    box-shadow:rgba(156, 143, 24, 0.8) 0px 10px 20px;
+    padding: 2rem;
+    cursor: grabbing;
+    
+}
+
+.grid-item:hover {
+    transform:  scaleY(1.2);  
+}
+
+.grid-item img {
+    width: 100%;
+    background-color: white;
+}
+
+#grid-floats .grid-item { 
+    position: relative;
+    width: 20%;
+    float: left;
+    margin: 1rem;
+    padding: 50px;
+    min-height: 355px;
+}
+
+
+/* grid flex section */
+#grid-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#grid-flex .grid-item {
+    flex: 0 1 20%;
+    margin: 1rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+/* grid floats */
+    #grid-floats .grid-item { 
+        background-color: rgb(104, 218, 76);
+        font-size: small;
+        align-items: center;
+        width: 50%;
+        margin-left: 6rem;
+    }
+    
+    section h3{
+        font-size: 20px;
+    }
+    section p{
+        font-size: 15px;
+    }
+ /* grid flex */
+    #grid-flex .grid-item {
+        background-color: lightblue;
+        flex-direction: column;
+        justify-content:left;
+        font-size: small;
+        align-items: flex-start;
+        width: 50%;
+        margin-left: 6rem;
+       
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+/* grid floats */
+#grid-floats .grid-item { 
+    background-color: rgb(104, 218, 76);
+    font-size: small;
+    width: 30%;
+}
+section h3{
+    font-size: 20px;
+}
+section p{
+    font-size: 15px;
+}
+
+/* grid flex */
+#grid-flex .grid-item {
+    background-color: lightblue;
+    flex-direction: column;
+    justify-content:left;
+    margin-right: 1rem;
+    font-size: small;
+}
+
+}
+
+@media only screen and (min-width: 1025px) {
+
+   /* grid floats */
+#grid-floats .grid-item { 
+    background-color: rgb(241, 100, 124);
+  
+}
+
+
+/* grid flex */
+#grid-flex .grid-item {
+    background-color: rgb(114, 147, 158);
+}
+
+
+   
+}
