@@ -1,0 +1,10 @@
+git branch 
+git diff
+git status
+git add 
+git commit 
+git push 
+mkdir folder
+touch file
+cd 
+pwd
